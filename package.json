@@ -1,0 +1,13 @@
+{
+  "name": "oop-observer",
+  "version": "1.0.3",
+  "description": "traditional observer pattern realization",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": ["pattern", "observer", "observable", "oop"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kostayne",
+  "license": "ISC"
+}
