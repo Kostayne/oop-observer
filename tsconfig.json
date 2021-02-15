@@ -2,7 +2,7 @@
     "compilerOptions": {
         "outDir": "lib",
         "declaration": true,
-        "sourceMap": true
+        "sourceMap": true,
     },
-    "exclude": ["lib"]
+    "exclude": ["lib", "node_modules", "src/index.test.ts"]
 }

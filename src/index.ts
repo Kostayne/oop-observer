@@ -5,10 +5,10 @@ export interface IObserver<T> {
 export interface IObserverable<T> {
     subscribe(observer: IObserver<T>);
     unsubscribe(observer: IObserver<T>);
-    notify();
+    notify(props: T);
 }
 
-export abstract class Observable<T> implements IObserverable<T> {
+export class Observable<T> implements IObserverable<T> {
     protected observers: IObserver<T>[] = [];
 
     private findObserverIndex(observer: IObserver<T>) {
@@ -21,16 +21,20 @@ export abstract class Observable<T> implements IObserverable<T> {
 
     subscribe(observer: IObserver<T>) {
         if (this.findObserverIndex(observer) != -1) {
-            throw new Error("Observer already subscribed");
+            throw new Error("Observer is already subscribed");
         }
         this.observers.push(observer);
     }
 
     unsubscribe(observer: IObserver<T>) {
         const index = this.findObserverIndex(observer);
-        if (index == -1) throw new Error("observer not subscribed");
-        this.observers = this.observers.splice(index, 1);
+        if (index == -1) throw new Error("observer is not subscribed");
+        this.observers.splice(index, 1);
     }
 
-    abstract notify();
+    notify(props: T) {
+        this.observers.forEach((observer) => {
+            observer.update(props);
+        });
+    }
 }

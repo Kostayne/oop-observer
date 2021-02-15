@@ -1,13 +1,29 @@
 {
   "name": "oop-observer",
-  "version": "1.0.3",
+  "version": "2.0.4",
   "description": "traditional observer pattern realization",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "keywords": ["pattern", "observer", "observable", "oop"],
+  "keywords": [
+    "pattern",
+    "observer",
+    "observable",
+    "oop",
+    "event",
+    "event-listener",
+    "event-emitter"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
-  "author": "kostayne",
-  "license": "ISC"
+  "author": "kostayne (github)",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.16",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3"
+  }
 }

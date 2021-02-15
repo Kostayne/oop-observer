@@ -4,12 +4,12 @@ export interface IObserver<T> {
 export interface IObserverable<T> {
     subscribe(observer: IObserver<T>): any;
     unsubscribe(observer: IObserver<T>): any;
-    notify(): any;
+    notify(props: T): any;
 }
-export declare abstract class Observable<T> implements IObserverable<T> {
+export declare class Observable<T> implements IObserverable<T> {
     protected observers: IObserver<T>[];
     private findObserverIndex;
     subscribe(observer: IObserver<T>): void;
     unsubscribe(observer: IObserver<T>): void;
-    abstract notify(): any;
+    notify(props: T): void;
 }

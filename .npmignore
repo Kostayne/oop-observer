@@ -1,3 +1,5 @@
-index.ts
 tsconfig.json
-test/
+node_modules/
+coverage/
+lib/example/
+src/
