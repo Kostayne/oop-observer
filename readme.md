@@ -1,13 +1,13 @@
-https://img.shields.io/bundlephobia/min/oop-observer?color=green
+![npm](https://img.shields.io/bundlephobia/min/oop-observer?color=green)
 <!-- size -->
 
-https://img.shields.io/npm/v/oop-observer?color=green
+![npm](https://img.shields.io/npm/v/oop-observer?color=green)
 <!-- version -->
 
-https://img.shields.io/npm/dm/oop-observer?color=green
+![npm](https://img.shields.io/npm/dm/oop-observer?color=green)
 <!-- downloads -->
 
-https://img.shields.io/npm/l/oop-observer?color=green 
+![npm](https://img.shields.io/npm/l/oop-observer?color=green )
 <!-- licence -->
 
 # OOP Obsever
