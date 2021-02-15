@@ -4,5 +4,5 @@
         "declaration": true,
         "sourceMap": true,
     },
-    "exclude": ["lib", "node_modules", "src/index.test.ts"]
+    "exclude": ["lib", "node_modules", "src/example"]
 }
