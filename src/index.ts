@@ -19,20 +19,20 @@ export class Observable<T> implements IObserverable<T> {
         return -1;
     }
 
-    subscribe(observer: IObserver<T>) {
+    subscribe(observer: IObserver<T>): void {
         if (this.findObserverIndex(observer) != -1) {
             throw new Error("Observer is already subscribed");
         }
         this.observers.push(observer);
     }
 
-    unsubscribe(observer: IObserver<T>) {
+    unsubscribe(observer: IObserver<T>): void {
         const index = this.findObserverIndex(observer);
         if (index == -1) throw new Error("observer is not subscribed");
         this.observers.splice(index, 1);
     }
 
-    notify(props: T) {
+    notify(props: T): void {
         this.observers.forEach((observer) => {
             observer.update(props);
         });
