@@ -18,7 +18,7 @@
     "test-coverage": "jest --coverage"
   },
   "author": "kostayne (github)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/plugin-transform-modules-commonjs": "^7.12.13",
